@@ -11,7 +11,7 @@ export default function SignUp() {
     }
 
     return (
-        <body className="w-full h-screen px-3 sm:px-20 md:px-40 lg:px-60 xl:px-[26rem]">
+        <div className="w-full h-screen px-3 sm:px-20 md:px-40 lg:px-60 xl:px-[26rem]">
             <div className="bg-white my-10 py-20 rounded-2xl drop-shadow">
                 <h1 className="text-center mb-3 text-4xl font-semibold">
                     Create a free Account
@@ -44,6 +44,6 @@ export default function SignUp() {
                     <button type="submit" className="w-full py-2 text-center rounded-md text-white mt-10 bg-green-700">Sign Up</button>
                 </form>
             </div>
-        </body>
+        </div>
     )
 }

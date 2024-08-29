@@ -11,7 +11,7 @@ export default function SignIn() {
     }
 
     return (
-        <body className="w-full h-screen px-3 sm:px-20 md:px-40 lg:px-60 xl:px-[28rem]">
+        <div className="w-full h-screen px-3 sm:px-20 md:px-40 lg:px-60 xl:px-[28rem]">
             <div className="bg-white my-10 py-20 rounded-2xl drop-shadow">
                 <h1 className="text-center mb-3 text-4xl font-bold">
                     Sign In
@@ -33,6 +33,6 @@ export default function SignIn() {
                     <button type="submit" className="w-full py-2 text-center rounded-md text-white mt-10 bg-green-700">Sign In</button>
                 </form>
             </div>
-        </body>
+        </div>
     )
 }
