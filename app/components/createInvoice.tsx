@@ -2,6 +2,7 @@
 import { v4 as uuidv4 } from 'uuid';
 import { useState } from "react"
 import { useRouter } from 'next/navigation';
+import UploadLogo from './uploadLogo';
 
 export default function CreateInvoiceComponent() {
 
@@ -202,9 +203,9 @@ export default function CreateInvoiceComponent() {
         <form className="flex w-full px-28 min-h-20 my-10 text-sm box-border">
             <div className="w-[65rem] bg-white min-h-40 p-5 pr-14">
                 <div className="w-full grid grid-cols-[70%_30%] text-center justify-between">
-                    <div className="w-full text-start border-none">
-                        <input type="button" src="" alt="" className="h-32 w-52 bg-gray-100"/>
-                    </div>
+                    
+                    <UploadLogo/>
+                    
                     <div className="">
                         <input type="text" name="invoice" value={inputs.invoice} onChange={handleChange} className="w-full py-2 pr-1 m-0 text-black text-[40px] text-right border border-solid border-white rounded hover:border hover:border-solid hover:border-gray-200 cursor-pointer outline-none"/><br />
                         
