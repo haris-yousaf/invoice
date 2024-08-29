@@ -143,6 +143,7 @@ export default function CreateInvoiceComponent() {
         dueDate: 'Due Date',
         PONumber: 'PO Number',
         item: 'Item',
+        itemInput: '',
         quantity: 'Quantity',
         rate: 'Rate',
         amount: 'Amount',
@@ -172,7 +173,7 @@ export default function CreateInvoiceComponent() {
         PONumberInput: '',
         notesInput: '',
         termsInput: '',
-
+        dueBalance: '',
     })
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -196,7 +197,7 @@ export default function CreateInvoiceComponent() {
     const handleButtonCreate = (event: React.MouseEvent<HTMLButtonElement>) => {
         event.preventDefault()
 
-        router.push('/view')
+        router.push('/view?inputs=' + JSON.stringify(inputs));
     }
 
     return (
@@ -263,7 +264,7 @@ export default function CreateInvoiceComponent() {
                 {/* Items Calculation Starts */}
                     <div className="items">
                         <div className="grid grid-cols-[60%_10%_15%_15%] text-center justify-between w-full my-2 gap-1 text-sm">
-                            <input type="text" className="w-full h-9 outline-none px-5 text-sm border border-solid border-gray-300 rounded-md" placeholder="Description of item/service..." />
+                            <input type="text" name='itemInput' value={inputs.itemInput} onChange={handleChange} className="w-full h-9 outline-none px-5 text-sm border border-solid border-gray-300 rounded-md" placeholder="Description of item/service..." />
                             <input id="quantityInput" name="quantityInput" value={inputs.quantityInput} onChange={handleChange} type="number" className="w-full h-9 outline-none px-5 text-sm border border-solid border-gray-300 rounded-md"/>
                             <div className="flex border border-solid border-gray-200 rounded-md">
                                 <span className="p-2 text-gray-500">$</span>
@@ -411,7 +412,7 @@ export default function CreateInvoiceComponent() {
 
                             <div className="grid grid-cols-[60%_40%] gap-1">
                                 <input type="text" className="text-right outline-none border border-solid border-white hover:border-gray-300 px-3 rounded-md" name="balanceDue" value={inputs.balanceDue} onChange={handleChange} />
-                                <input type="text" className="w-full text-right outline-none px-5 text-sm rounded-md" value={`$ ${dueBalance}`} readOnly />
+                                <input type="text" className="w-full text-right outline-none px-5 text-sm rounded-md" name='dueBalance' value={`$ ${dueBalance}`} readOnly />
                             </div>
                         </div>
                     {/* TOTAL CALCULATIONS END     */}

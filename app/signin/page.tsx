@@ -11,8 +11,8 @@ export default function SignIn() {
     }
 
     return (
-        <body className="w-full h-screenflex align-items-center bg-light">
-            <div className="bg-white mx-[30%] my-10 py-20 rounded-2xl drop-shadow">
+        <body className="w-full h-screen px-3 sm:px-20 md:px-40 lg:px-60 xl:px-[28rem]">
+            <div className="bg-white my-10 py-20 rounded-2xl drop-shadow">
                 <h1 className="text-center mb-3 text-4xl font-bold">
                     Sign In
                 </h1>
