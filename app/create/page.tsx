@@ -1,11 +1,11 @@
 import CreateInvoiceComponent from "../components/createInvoice";
-import Navbar from "../components/navAfter";
+import Nav from "../components/nav";
 
 export default function CreateInvoice(){
 
     return (
         <>
-        <Navbar/>
+        <Nav/>
         <CreateInvoiceComponent/>
         </>
     )

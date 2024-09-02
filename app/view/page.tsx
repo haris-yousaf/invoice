@@ -1,10 +1,10 @@
-import Navbar from "../components/navAfter";
+import Nav from "../components/nav";
 import ViewInvoiceComponent from "../components/viewInvoice";
 
 export default function ViewInvoice() {
     return(
         <>
-            <Navbar/>
+            <Nav/>
             <ViewInvoiceComponent/>
         </>
     )
