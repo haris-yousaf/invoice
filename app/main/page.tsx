@@ -1,10 +1,10 @@
 import MyInvoices from "../components/myInvoices";
-import Navbar from "../components/navAfter";
+import Nav from "../components/nav";
 
 export default function Main() {
     return (
         <>
-            <Navbar />
+            <Nav />
             <div className="w-full p-32">
                 <div className="w-full min-h-52 bg-white py-6 rounded-2xl drop-shadow-lg shadow-slate-800">
                     <div className="w-full flex flex-col gap-2 md:flex-row text-left align-middle justify-between box-border px-8">

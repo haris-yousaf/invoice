@@ -21,16 +21,25 @@ export default function SignIn() {
                 </p>
 
                 <form onSubmit={handleSubmit} className="flex flex-col gap-1 text-left mx-10 my-10">
+
+                    {/* Name */}
+                    <label htmlFor="inputName">Full Name</label>
+                    <input type="text" className="w-full py-2 px-4 mb-10 border border-solid border-gray-200 outline-none rounded-md" required/>
     
                     {/* Email Address */}
                     <label className="" htmlFor="inputEmail">Email</label>
-                    <input type="email" className="w-full py-2 px-4 border border-solid border-gray-200 outline-none rounded-md" required/>
+                    <input type="email" className="w-full py-2 px-4 mb-10 border border-solid border-gray-200 outline-none rounded-md" required/>
 
                     {/* Password */}
-                    <label className="mt-10" htmlFor="inputPassword">Password</label>
-                    <input type="password" className="w-full py-2 px-4 border border-solid border-gray-200 outline-none rounded-md" required/>
+                    <label className="" htmlFor="inputPassword">Password</label>
+                    <input type="password" className="w-full py-2 px-4 mb-10 border border-solid border-gray-200 outline-none rounded-md" required/>
 
-                    <button type="submit" className="w-full py-2 text-center rounded-md text-white mt-10 bg-green-700">Sign In</button>
+                    <button type="submit" className="w-full py-2 text-center rounded-md text-white bg-green-700">Sign In</button>
+                    
+                    <div className="flex flex-col text-center mt-5">
+                    <label htmlFor="noAccount" className="">Don't have an account?</label>
+                    <a href="./signup" className="underline hover:text-green-700">Signup</a>
+                    </div>
                 </form>
             </div>
         </div>
