@@ -1,7 +1,25 @@
+"use client";
+
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
+import { useRouter } from "next/navigation";
 import MyInvoices from "../components/myInvoices";
 import Nav from "../components/nav";
 
 export default function Main() {
+    const router = useRouter();
+    const isAuthenticated = useSelector((state: any) => state.auth.isAuthenticated);
+
+    useEffect(() => {
+        if (!isAuthenticated) {
+            router.push("/signin");
+        }
+    }, [isAuthenticated, router]);
+
+    if (!isAuthenticated) {
+        return null;
+    }
+
     return (
         <>
             <Nav />
@@ -26,5 +44,5 @@ export default function Main() {
                 </div>
             </div>
         </>
-    )
+    );
 }
