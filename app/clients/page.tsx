@@ -21,7 +21,7 @@ export default function Items() {
             <Nav />
             <div className="w-full px-2 xl:px-32 py-20">
                 <div className="w-full px-3 mb-6 flex flex-col gap-8 md:flex-row justify-between">
-                    <h1 className="text-4xl font-semibold">Add Items</h1>
+                    <h1 className="text-4xl font-semibold">Add Clients</h1>
                     
                     <button className="px-5 py-2 bg-[#677788] w-40 text-white rounded-xl shadow-slate-800"
                         onClick={addRow}>
